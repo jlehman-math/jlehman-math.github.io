@@ -2,15 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Test</title>
+  <title>Jane Doe</title>
   <style>
-    /* Page background color */
+    /* Global page style */
     body {
-      background-color: rgb(255, 253, 208); /* cream-white background */
+      background-color: rgb(255, 253, 208); /* cream-white */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #000;
+    }
+
+    /* Container for the whole page content */
+    .container {
+      display: flex;
+      max-width: 1000px;
+      margin: 50px auto; /* pushes content a bit down from top */
+      padding: 20px;
+      gap: 40px;
+    }
+
+    /* Left column: name + sections */
+    .left-column {
+      flex: 2; /* bigger portion */
+    }
+
+    /* Right column: photo + contact info */
+    .right-column {
+      flex: 1; /* smaller portion */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Name at top */
+    h1 {
+      text-align: left;
+      margin-bottom: 30px;
+      font-size: 3em;
+    }
+
+    /* Subsections */
+    h2 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #999;
+      padding-bottom: 5px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+
+    /* Photo */
+    .photo {
+      width: 200px;
+      height: 200px;
+      background-color: #ccc; /* placeholder for now */
+      object-fit: cover;
+      margin-bottom: 30px;
+    }
+
+    /* Contact Info box */
+    .contact-info {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #999;
+      background-color: #f9f9f9;
+      text-align: left;
     }
   </style>
 </head>
 <body>
-  <h1>Test</h1>
+  <div class="container">
+    <!-- Left column -->
+    <div class="left-column">
+      <h1>Jane Doe</h1>
+      <h2>About Me</h2>
+      <p>[Write something about yourself here]</p>
+
+      <h2>Interests</h2>
+      <p>[List your interests]</p>
+
+      <h2>Research</h2>
+      <p>[Brief description of research]</p>
+
+      <h2>Links</h2>
+      <p>[Links to publications, projects, etc.]</p>
+    </div>
+
+    <!-- Right column -->
+    <div class="right-column">
+      <!-- Photo -->
+      <img src="photo.jpg" alt="Jane Doe" class="photo">
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h2>Contact Info</h2>
+        <p>Email: [Your email]</p>
+        <p>Address: [Your address]</p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
+
