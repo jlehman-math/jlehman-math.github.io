@@ -17,7 +17,7 @@ body {
   max-width: 880px;
   margin: 40px auto;
   padding: 20px;
-  gap: 18px; /* tight, academic spacing */
+  gap: 18px;
 }
 
 .left-column {
@@ -29,9 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
-  /* Align top of photo with "About Me" */
-  margin-top: 115px;
+  margin-top: 115px; /* aligns photo with About Me */
 }
 
 /* =========================
@@ -41,6 +39,7 @@ h1 {
   font-size: 2.4em;
   margin-bottom: 30px;
   color: #2c3e50;
+  font-weight: 500; /* lighter than default bold */
 }
 
 h2 {
@@ -50,6 +49,7 @@ h2 {
   color: #34495e;
   padding-bottom: 4px;
   position: relative;
+  font-weight: 400; /* normal weight */
 }
 
 h2::after {
@@ -72,14 +72,11 @@ p {
    ========================= */
 .photo {
   width: 140px;
-  height: 210px;              /* spans About Me + Interests */
+  height: 210px;
   object-fit: cover;
   border-radius: 14px;
-
-  /* Soft, restrained depth */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-
-  margin-left: 55px;          /* ≈ 1.5 cm offset */
+  margin-left: 55px; /* ≈ 1.5 cm offset */
   margin-bottom: 12px;
 }
 
@@ -90,11 +87,12 @@ p {
   font-size: 0.75em;
   text-align: center;
   color: #555;
-  margin-left: 55px;          /* aligned with photo */
+  margin-left: 55px;
 }
 
 .contact-info h2 {
   font-size: 1em;
+  font-weight: 400;
   border: none;
   margin-bottom: 4px;
 }
@@ -112,7 +110,7 @@ p {
 }
 
 .paper-title {
-  font-weight: bold;
+  font-weight: 500; /* subtle emphasis, not bold */
   color: #2c3e50;
   cursor: pointer;
 }
@@ -164,3 +162,4 @@ p {
     text-align: center;
   }
 }
+
