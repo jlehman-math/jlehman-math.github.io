@@ -6,154 +6,157 @@ body {
     background-color: var(--background);
 }
 
-/* extend element */
-
-.georgia-font {
-    font-family: Georgia, serif;
+.geist-font {
+  font-style: normal;
+  font-optical-sizing: auto;
+  font-family: "Geist", sans-serif;
 }
 
 /* layout flow */
 
 .main-container {
     display: flex;
-    gap: 1rem;
+    gap: 4rem;
     margin: 2rem auto;
     padding-left: 2rem;
     padding-right: 2rem;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .content-column {
-    max-width: 600px;
-    padding-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
-.media-column {
-    max-width: 200px;
-    padding-bottom: 1rem;
-}
-
-
-/* =========================
-   Headings & text
-   ========================= */
-h1 {
+.content-column h1 {
   font-size: 2.4em;
-  margin-bottom: 30px;
   font-weight: 500;
+  margin-bottom: 30px;
 }
 
-h2 {
+.content-column h2 {
   margin-top: 28px;
   margin-bottom: 8px;
   font-size: 1.15em;
-  font-weight: 400;
+  font-weight: 500;
 }
 
-p {
+.content-column p {
   font-size: 0.95em;
   line-height: 1.5;
   margin-bottom: 12px;
 }
 
-/* =========================
-   Photo aligned to content-block
-   ========================= */
-.content-block {
+.content-column .content-block {
   display: flex;
   flex-direction: column;
 }
 
-.photo {
-  width: 140px;
-  object-fit: cover;
-  border-radius: 14px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  /* Align top of photo with About Me, bottom with Interests */
-  align-self: flex-start;
-  margin-bottom: 12px;
-}
-
-/* =========================
-   Contact info (caption-like)
-   ========================= */
-.contact-info {
-  font-size: 0.75em;
-  text-align: center;
-}
-
-.contact-info h2 {
-  font-size: 1em;
-  font-weight: 400;
-  margin-bottom: 4px;
-}
-
-/* =========================
-   Research papers (bullets match text)
-   ========================= */
-.papers {
+.content-column .papers {
   list-style: disc;
   padding-left: 1.2em;
   margin-top: 10px;
-  font-family: Georgia, serif;
   font-size: 0.95em;
   line-height: 1.5;
 }
 
-.papers li {
+.content-column .papers li {
   margin-bottom: 14px;
 }
 
-.paper-title {
+.content-column .papers .paper-title {
   font-weight: 400;
   cursor: pointer;
 }
 
-.paper-title:hover {
-  text-decoration: underline;
+.content-column .papers .paper-title:hover {
+  border-bottom: 1px solid;
 }
 
-.paper-links {
+.content-column .papers .paper-links {
   font-size: 0.9em;
   margin-left: 4px;
 }
 
-.paper-links a {
+.content-column .papers .paper-links a {
   color: var(--primary);
   text-decoration: none;
 }
 
-.paper-links a:hover {
+.content-column .papers .paper-links a:hover {
   text-decoration: underline;
 }
 
-.paper-description {
+.content-column .papers .paper-description {
   font-size: 0.9em;
   margin-top: 4px;
   color: var(--muted-foreground);
   max-width: 600px;
 }
 
-/* =========================
-   Responsive behavior
-   ========================= */
-@media (max-width: 700px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .right-column {
-    margin-top: 20px;
-    align-items: center;
-  }
-
-  .photo,
-  .contact-info {
-    margin-left: 0;
-  }
-
-  h1 {
-    text-align: center;
-  }
+.content-column .header {
+  display: none;
+  justify-content: space-between;
 }
 
+.content-column .header .photo {
+  width: 100px;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.content-column .contact-info {
+  display: none;
+}
+
+.content-column .contact-info p {
+  font-size: 0.75em;
+  font-weight: 300;
+}
+
+.media-column {
+  padding-bottom: 1rem;
+}
+
+.media-column .photo {
+  width: 160px;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.media-column .contact-info {
+  font-size: 0.75em;
+}
+
+.media-column .contact-info p {
+  text-align: left;
+  font-weight: 300;
+}
+
+@media (max-width: 670px) {
+  .main-container {
+    margin-top: 1rem;
+  }
+  .content-column h1 {
+    margin-top: 1rem;
+  }
+  .content-column.responsive h1 {
+    display: none;
+  }
+  .content-column.responsive .header h1 {
+    display: block;
+    font-size: 2.4em;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+  .content-column.responsive .header {
+    display: flex;
+  }
+  .content-column.responsive .contact-info {
+    display: block;
+  }
+  .media-column.responsive {
+    display: none;
+  }
+}

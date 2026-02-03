@@ -3,25 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <title>jlehman</title>
-  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/variables.css" />
   <link rel="stylesheet" href="./assets/layout.css" />
   <script>MathJax = {tex: {inlineMath: {'[+]': [['$', '$']]}}};</script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
 </head>
-<body class="variables -adaptive georgia-font">
+<body class="variables geist-font">
   <div class="main-container" style="max-width: 1280px;">
 
-    <!-- Left column -->
-    <div class="content-column">
+    <div class="content-column responsive" style="max-width: 600px;">
       <h1>Joshua Lehman</h1>
+      <div class="header">
+        <h1>Joshua Lehman</h1>
+        <img src="./assets/photo.png" alt="describe this photo" class="photo">
+      </div>
 
       <div class="content-block">
         <h2>About Me</h2>
-        <p>I am a third year graduate student at Notre Dame. My advisor is Nick Salter. In May of 2023 I graduated from the University of Auckland, New Zealand. In my spare time I enjoy exploring wherever I am by bike.  </p>
+        <p>
+          I am a third year graduate student at Notre Dame. 
+          My advisor is <a href="#" target="_blank">Nick Salter</a>. 
+          In May of 2023 I graduated from the University of Auckland, New Zealand. 
+          In my spare time I enjoy exploring wherever I am by bike.  
+        </p>
 
         <h2>Interests</h2>
-        <p> I enjoy thinking about the interface between complex algebraic geometry and low dimensional topology. Recently, I've been thinking about topological monodromy groups for surfaces in four manifolds.    </p>
+        <p> 
+          I enjoy thinking about the interface between complex algebraic geometry and low dimensional topology. 
+          Recently, I've been thinking about topological monodromy groups for surfaces in four manifolds.
+        </p>
       </div>
 
       <h2>Research</h2>
@@ -31,8 +44,7 @@
             Flexible surfaces in $\mathbb{C}P^2$ and $S^2\times S^2$. 
           </span>
           <span class="paper-links">
-            [<a href="paper1.pdf" target="_blank">PDF</a>,
-             <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank">arXiv</a>]
+            [ <a href="paper1.pdf" target="_blank">PDF</a>, <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank">arXiv</a> ]
           </span>
           <div class="paper-description"></div>
         </li>
@@ -42,8 +54,7 @@
             Paper Title Two
           </span>
           <span class="paper-links">
-            [<a href="paper2.pdf" target="_blank">PDF</a>,
-             <a href="https://arxiv.org/abs/yyyy.yyyyy" target="_blank">arXiv</a>]
+            [ <a href="paper2.pdf" target="_blank">PDF</a>, <a href="https://arxiv.org/abs/yyyy.yyyyy" target="_blank">arXiv</a> ]
           </span>
           <div class="paper-description"></div>
         </li>
@@ -58,32 +69,38 @@
         </li>
         <li>
           <a href="https://detexify.kirelabs.org/classify.html#google_vignette" target="_blank">
-            What’s that in TeX?
+            What's that in TeX?
           </a>
         </li>
       </ul>
+      <div class="contact-info responsive">
+        <h2>Contact</h2>
+        <p>Email: [your email]</p>
+        <p>Address: [your address]</p>
+      </div>
     </div>
 
-    <!-- Right column -->
-    <div class="media-column">
-      <img src="./assets/photo.png" width="68px" alt="Jane Doe" class="photo">
+    <div class="media-column responsive" style="max-width: 200px;">
+      <img src="./assets/photo.png" alt="describe this photo" class="photo">
       <div class="contact-info">
-        <h2>Contact Info</h2>
         <p>Email: [your email]</p>
         <p>Address: [your address]</p>
       </div>
     </div>
 
   </div>
-
-  <!-- Toggle paper descriptions -->
   <script>
-    document.querySelectorAll('.paper-title').forEach(title => {
-      title.addEventListener('click', () => {
-        const desc = title.parentElement.querySelector('.paper-description');
-        desc.textContent = desc.textContent ? '' : title.dataset.description;
-      });
-    });
+    function inject_description(title) {
+      const description = title.parentElement.querySelector(".paper-description");
+      if (description.textContent.length == 0) {
+        description.textContent = title.dataset.description;
+      } else {
+        description.textContent = "";
+      }
+    }
+
+    document.querySelectorAll(".content-column .papers .paper-title")
+    .forEach(title => {title.addEventListener("click", () => inject_description(title))});
   </script>
 </body>
 </html>
