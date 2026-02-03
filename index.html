@@ -4,44 +4,52 @@
   <meta charset="UTF-8" />
   <title>Jane Doe</title>
   <style>
+    /* Global page style */
     body {
       background-color: rgb(255, 253, 208); /* cream-white */
-      font-family: Arial, sans-serif;
+      font-family: Georgia, serif; /* slightly more academic feel */
       margin: 0;
       padding: 0;
-      color: #000;
+      color: #333;
     }
 
+    /* Container for main content */
     .container {
       display: flex;
-      max-width: 1000px;
-      margin: 50px auto;
+      max-width: 900px;
+      margin: 50px auto; /* pushes content down a bit */
       padding: 20px;
       gap: 40px;
     }
 
+    /* Left column: name + main sections */
     .left-column {
       flex: 2;
     }
 
+    /* Right column: photo + contact info */
     .right-column {
-      flex: 1;
+      flex: 0 0 180px; /* fixed narrow width */
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
+    /* Name at top */
     h1 {
-      text-align: left;
-      margin-bottom: 30px;
       font-size: 3em;
+      margin-bottom: 30px;
+      color: #2c3e50; /* subtle dark blue accent */
     }
 
+    /* Subsection headers */
     h2 {
       margin-top: 20px;
       margin-bottom: 10px;
-      border-bottom: 1px solid #999;
+      border-bottom: 1px solid #bbb;
       padding-bottom: 5px;
+      color: #34495e; /* softer accent color */
+      font-size: 1.3em;
     }
 
     p {
@@ -51,21 +59,29 @@
 
     /* Photo with rounded corners and depth */
     .photo {
-      width: 200px;
-      height: 200px;
+      width: 150px;       /* slightly smaller */
+      height: 150px;
       object-fit: cover;
-      border-radius: 15px;                    /* Rounded corners */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-      margin-bottom: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin-bottom: 10px;
     }
 
+    /* Contact info as a small caption */
     .contact-info {
       width: 100%;
-      padding: 15px;
-      border: 1px solid #999;
-      background-color: #f9f9f9;
-      text-align: left;
+      padding: 5px;
+      font-size: 0.8em;   /* much smaller */
+      color: #555;
+      text-align: center;
     }
+
+    .contact-info h2 {
+      font-size: 1em;
+      border: none;
+      margin-bottom: 5px;
+    }
+
   </style>
 </head>
 <body>
@@ -73,6 +89,7 @@
     <!-- Left column -->
     <div class="left-column">
       <h1>Jane Doe</h1>
+
       <h2>About Me</h2>
       <p>[Write something about yourself here]</p>
 
@@ -88,8 +105,10 @@
 
     <!-- Right column -->
     <div class="right-column">
+      <!-- Photo -->
       <img src="photo.jpg" alt="Jane Doe" class="photo">
 
+      <!-- Contact Info -->
       <div class="contact-info">
         <h2>Contact Info</h2>
         <p>Email: [Your email]</p>
