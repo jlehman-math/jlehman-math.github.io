@@ -1,0 +1,22 @@
+/* root variables */
+.variables {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --primary: oklch(0.208 0.042 265.755);
+  --secondary: oklch(0.968 0.007 247.896);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.929 0.013 255.508);
+  --muted: oklch(0.968 0.007 247.896);
+  --muted-foreground: oklch(0.554 0.046 257.417);
+}
+@media (prefers-color-scheme: dark) {
+  .variables.adaptive {
+    --border: oklch(1 0 0 / 10%);
+    --background: oklch(0.129 0.042 264.695);
+    --primary: oklch(0.929 0.013 255.508);
+    --secondary: oklch(0.279 0.041 260.031);
+    --destructive: oklch(0.704 0.191 22.216);
+    --muted: oklch(0.279 0.041 260.031);
+    --muted-foreground: oklch(0.704 0.04 256.788);
+  }
+}

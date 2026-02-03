@@ -1,0 +1,159 @@
+/* overide body styling */
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--primary);
+    background-color: var(--background);
+}
+
+/* extend element */
+
+.georgia-font {
+    font-family: Georgia, serif;
+}
+
+/* layout flow */
+
+.main-container {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    justify-content: space-between;
+}
+
+.content-column {
+    max-width: 600px;
+    padding-bottom: 1rem;
+}
+
+.media-column {
+    max-width: 200px;
+    padding-bottom: 1rem;
+}
+
+
+/* =========================
+   Headings & text
+   ========================= */
+h1 {
+  font-size: 2.4em;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+h2 {
+  margin-top: 28px;
+  margin-bottom: 8px;
+  font-size: 1.15em;
+  font-weight: 400;
+}
+
+p {
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   Photo aligned to content-block
+   ========================= */
+.content-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo {
+  width: 140px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  /* Align top of photo with About Me, bottom with Interests */
+  align-self: flex-start;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   Contact info (caption-like)
+   ========================= */
+.contact-info {
+  font-size: 0.75em;
+  text-align: center;
+}
+
+.contact-info h2 {
+  font-size: 1em;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+/* =========================
+   Research papers (bullets match text)
+   ========================= */
+.papers {
+  list-style: disc;
+  padding-left: 1.2em;
+  margin-top: 10px;
+  font-family: Georgia, serif;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.papers li {
+  margin-bottom: 14px;
+}
+
+.paper-title {
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.paper-title:hover {
+  text-decoration: underline;
+}
+
+.paper-links {
+  font-size: 0.9em;
+  margin-left: 4px;
+}
+
+.paper-links a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.paper-links a:hover {
+  text-decoration: underline;
+}
+
+.paper-description {
+  font-size: 0.9em;
+  margin-top: 4px;
+  color: var(--muted-foreground);
+  max-width: 600px;
+}
+
+/* =========================
+   Responsive behavior
+   ========================= */
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .right-column {
+    margin-top: 20px;
+    align-items: center;
+  }
+
+  .photo,
+  .contact-info {
+    margin-left: 0;
+  }
+
+  h1 {
+    text-align: center;
+  }
+}
+

@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>jlehman</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="./assets/variables.css" />
+  <link rel="stylesheet" href="./assets/layout.css" />
+  <script>MathJax = {tex: {inlineMath: {'[+]': [['$', '$']]}}};</script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
 </head>
-<body>
-  <div class="container">
+<body class="variables -adaptive georgia-font">
+  <div class="main-container" style="max-width: 1280px;">
 
     <!-- Left column -->
-    <div class="left-column">
+    <div class="content-column">
       <h1>Joshua Lehman</h1>
 
       <div class="content-block">
@@ -61,8 +65,8 @@
     </div>
 
     <!-- Right column -->
-    <div class="right-column">
-      <img src="photo.jpg" alt="Jane Doe" class="photo">
+    <div class="media-column">
+      <img src="./assets/photo.png" width="68px" alt="Jane Doe" class="photo">
       <div class="contact-info">
         <h2>Contact Info</h2>
         <p>Email: [your email]</p>
