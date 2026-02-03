@@ -10,11 +10,7 @@
 
     <!-- Left column -->
     <div class="left-column">
-      <!-- Name + photo row -->
-      <div class="name-photo">
-        <img src="photo.jpg" alt="Jane Doe" class="photo">
-        <h1>Jane Doe</h1>
-      </div>
+      <h1>Jane Doe</h1>
 
       <h2>About Me</h2>
       <p>[Write something about yourself here]</p>
@@ -25,11 +21,24 @@
       <h2>Research</h2>
       <ul class="papers">
         <li>
-          <a href="#" class="paper-link" data-description="Description of Paper 1 goes here.">Paper 1: Amazing Research</a>
+          <span class="paper-title" data-description="This paper studies amazing things using rigorous methods.">
+            Paper Title One
+          </span>
+          <span class="paper-links">
+            [<a href="paper1.pdf" target="_blank">PDF</a>,
+             <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank">arXiv</a>]
+          </span>
           <div class="paper-description"></div>
         </li>
+
         <li>
-          <a href="#" class="paper-link" data-description="Description of Paper 2 goes here.">Paper 2: Another Study</a>
+          <span class="paper-title" data-description="This paper explores a different fascinating problem.">
+            Paper Title Two
+          </span>
+          <span class="paper-links">
+            [<a href="paper2.pdf" target="_blank">PDF</a>,
+             <a href="https://arxiv.org/abs/yyyy.yyyyy" target="_blank">arXiv</a>]
+          </span>
           <div class="paper-description"></div>
         </li>
       </ul>
@@ -38,25 +47,25 @@
       <p>[Links to projects, websites, etc.]</p>
     </div>
 
-    <!-- Right column (still narrow, optional for extra info) -->
+    <!-- Right column -->
     <div class="right-column">
+      <img src="photo.jpg" alt="Jane Doe" class="photo">
+
       <div class="contact-info">
-        <h2>Contact Info</h2>
-        <p>Email: [Your email]</p>
+        <h2>Contact</h2>
+        <p>Email: [your@email]</p>
         <p>Address: [Your address]</p>
       </div>
     </div>
 
   </div>
 
-  <!-- Small script for showing paper descriptions -->
+  <!-- Toggle paper descriptions -->
   <script>
-    const paperLinks = document.querySelectorAll('.paper-link');
-    paperLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const desc = link.nextElementSibling;
-        desc.textContent = desc.textContent ? '' : link.dataset.description;
+    document.querySelectorAll('.paper-title').forEach(title => {
+      title.addEventListener('click', () => {
+        const desc = title.parentElement.querySelector('.paper-description');
+        desc.textContent = desc.textContent ? '' : title.dataset.description;
       });
     });
   </script>
