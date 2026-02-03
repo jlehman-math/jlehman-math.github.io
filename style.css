@@ -2,8 +2,8 @@
    Global styles
    ========================= */
 body {
-  background-color: #fefdf7;          /* very light off-white */
-  font-family: Georgia, serif;        /* academic feel */
+  background-color: #fefdf7;
+  font-family: Georgia, serif;
   margin: 0;
   padding: 0;
   color: #333;
@@ -17,7 +17,7 @@ body {
   max-width: 880px;
   margin: 40px auto;
   padding: 20px;
-  gap: 20px;                          /* tighter horizontal spacing */
+  gap: 18px; /* tight, academic spacing */
 }
 
 .left-column {
@@ -25,11 +25,13 @@ body {
 }
 
 .right-column {
-  flex: 0 0 170px;                    /* narrow, controlled width */
+  flex: 0 0 170px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 85px;                   /* aligns photo with About Me */
+
+  /* Align top of photo with "About Me" */
+  margin-top: 115px;
 }
 
 /* =========================
@@ -55,7 +57,7 @@ h2::after {
   display: block;
   width: 40px;
   height: 2px;
-  background-color: #dcdcdc;          /* subtle accent bar */
+  background-color: #dcdcdc;
   margin-top: 2px;
 }
 
@@ -66,19 +68,19 @@ p {
 }
 
 /* =========================
-   Photo
+   Photo (spans About Me → Interests)
    ========================= */
 .photo {
   width: 140px;
-  height: 140px;
+  height: 210px;              /* spans About Me + Interests */
   object-fit: cover;
   border-radius: 14px;
 
-  /* Softer, lighter depth */
+  /* Soft, restrained depth */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 
-  margin-left: 55px;                  /* ≈ 1.5 cm right offset */
-  margin-bottom: 10px;
+  margin-left: 55px;          /* ≈ 1.5 cm offset */
+  margin-bottom: 12px;
 }
 
 /* =========================
@@ -88,7 +90,7 @@ p {
   font-size: 0.75em;
   text-align: center;
   color: #555;
-  margin-left: 55px;                  /* aligns with photo */
+  margin-left: 55px;          /* aligned with photo */
 }
 
 .contact-info h2 {
@@ -162,4 +164,3 @@ p {
     text-align: center;
   }
 }
-
