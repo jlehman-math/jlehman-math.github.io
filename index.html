@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <title>Jane Doe</title>
-  <!-- Link external CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    
+
     <!-- Left column -->
     <div class="left-column">
-      <h1>Jane Doe</h1>
+      <!-- Name + photo row -->
+      <div class="name-photo">
+        <img src="photo.jpg" alt="Jane Doe" class="photo">
+        <h1>Jane Doe</h1>
+      </div>
 
       <h2>About Me</h2>
       <p>[Write something about yourself here]</p>
@@ -20,18 +23,23 @@
       <p>[List your interests]</p>
 
       <h2>Research</h2>
-      <p>[Brief description of research]</p>
+      <ul class="papers">
+        <li>
+          <a href="#" class="paper-link" data-description="Description of Paper 1 goes here.">Paper 1: Amazing Research</a>
+          <div class="paper-description"></div>
+        </li>
+        <li>
+          <a href="#" class="paper-link" data-description="Description of Paper 2 goes here.">Paper 2: Another Study</a>
+          <div class="paper-description"></div>
+        </li>
+      </ul>
 
       <h2>Links</h2>
-      <p>[Links to publications, projects, etc.]</p>
+      <p>[Links to projects, websites, etc.]</p>
     </div>
 
-    <!-- Right column -->
+    <!-- Right column (still narrow, optional for extra info) -->
     <div class="right-column">
-      <!-- Photo -->
-      <img src="photo.jpg" alt="Jane Doe" class="photo">
-
-      <!-- Contact Info -->
       <div class="contact-info">
         <h2>Contact Info</h2>
         <p>Email: [Your email]</p>
@@ -40,6 +48,17 @@
     </div>
 
   </div>
+
+  <!-- Small script for showing paper descriptions -->
+  <script>
+    const paperLinks = document.querySelectorAll('.paper-link');
+    paperLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const desc = link.nextElementSibling;
+        desc.textContent = desc.textContent ? '' : link.dataset.description;
+      });
+    });
+  </script>
 </body>
 </html>
-
