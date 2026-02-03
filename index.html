@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <title>Jane Doe</title>
   <style>
-    /* Global page style */
     body {
       background-color: rgb(255, 253, 208); /* cream-white */
       font-family: Arial, sans-serif;
@@ -13,36 +12,31 @@
       color: #000;
     }
 
-    /* Container for the whole page content */
     .container {
       display: flex;
       max-width: 1000px;
-      margin: 50px auto; /* pushes content a bit down from top */
+      margin: 50px auto;
       padding: 20px;
       gap: 40px;
     }
 
-    /* Left column: name + sections */
     .left-column {
-      flex: 2; /* bigger portion */
+      flex: 2;
     }
 
-    /* Right column: photo + contact info */
     .right-column {
-      flex: 1; /* smaller portion */
+      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    /* Name at top */
     h1 {
       text-align: left;
       margin-bottom: 30px;
       font-size: 3em;
     }
 
-    /* Subsections */
     h2 {
       margin-top: 20px;
       margin-bottom: 10px;
@@ -55,16 +49,16 @@
       line-height: 1.5;
     }
 
-    /* Photo */
+    /* Photo with rounded corners and depth */
     .photo {
       width: 200px;
       height: 200px;
-      background-color: #ccc; /* placeholder for now */
       object-fit: cover;
+      border-radius: 15px;                    /* Rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
       margin-bottom: 30px;
     }
 
-    /* Contact Info box */
     .contact-info {
       width: 100%;
       padding: 15px;
@@ -94,10 +88,8 @@
 
     <!-- Right column -->
     <div class="right-column">
-      <!-- Photo -->
       <img src="photo.jpg" alt="Jane Doe" class="photo">
 
-      <!-- Contact Info -->
       <div class="contact-info">
         <h2>Contact Info</h2>
         <p>Email: [Your email]</p>
@@ -107,4 +99,3 @@
   </div>
 </body>
 </html>
-
