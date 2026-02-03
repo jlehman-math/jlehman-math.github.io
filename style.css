@@ -47,18 +47,7 @@ h2 {
   margin-bottom: 8px;
   font-size: 1.15em;
   color: #34495e;
-  padding-bottom: 4px;
-  position: relative;
   font-weight: 400;
-}
-
-h2::after {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 2px;
-  background-color: #dcdcdc;
-  margin-top: 2px;
 }
 
 p {
@@ -93,7 +82,6 @@ p {
 .contact-info h2 {
   font-size: 1em;
   font-weight: 400;
-  border: none;
   margin-bottom: 4px;
 }
 
@@ -101,8 +89,8 @@ p {
    Research papers
    ========================= */
 .papers {
-  list-style: disc;          /* bullet points restored */
-  padding-left: 1.2em;       /* standard academic indent */
+  list-style: disc;
+  padding-left: 1.2em;
   margin-top: 10px;
 }
 
@@ -111,7 +99,7 @@ p {
 }
 
 .paper-title {
-  font-weight: 400;          /* NOT bold */
+  font-weight: 400;
   color: #2c3e50;
   cursor: pointer;
 }
@@ -163,3 +151,4 @@ p {
     text-align: center;
   }
 }
+
