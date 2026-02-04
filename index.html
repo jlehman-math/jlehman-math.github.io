@@ -2,23 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>jlehman</title>
+  <title>Joshua Lehman</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/variables.css" />
   <link rel="stylesheet" href="./assets/layout.css" />
-  <script>MathJax = {tex: {inlineMath: {'[+]': [['$', '$']]}}};</script>
+  <script>
+    MathJax = {
+      tex: {inlineMath: {'[+]': [['$', '$']]}},
+      options : {
+        enableMenu: false,
+      }
+    };
+  </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
 </head>
 <body class="variables geist-font">
   <div class="main-container" style="max-width: 1280px;">
 
     <div class="content-column responsive" style="max-width: 600px;">
+
       <h1>Joshua Lehman</h1>
       <div class="header">
-        <h1>Joshua Lehman</h1>
-        <img src="./assets/photo.png" alt="describe this photo" class="photo">
+        <h1 class="shrink-font-size">Joshua Lehman</h1>
+        <img src="./assets/photo.png" alt="Waiheke selfie" class="photo">
       </div>
 
       <div class="content-block">
@@ -48,8 +56,6 @@
           </span>
           <div class="paper-description"></div>
         </li>
-
-       
       </ul>
 
       <h2>Links</h2>
@@ -65,15 +71,17 @@
           </a>
         </li>
       </ul>
+
       <div class="contact-info responsive">
         <h2>Contact</h2>
         <p>Email: jlehman4"at"nd.edu </p>
         <p>Address: Department of Mathematics, 125 Hurley Hall</p>
       </div>
+
     </div>
 
     <div class="media-column responsive" style="max-width: 200px;">
-      <img src="./assets/photo.png" alt="describe this photo" class="photo">
+      <img src="./assets/photo.png" width="200px" alt="Waiheke selfie" class="photo">
       <div class="contact-info">
         <p>Email: jlehman4"at"nd.edu</p>
         <p>Address: Department of Mathematics, 125 Hurley Hall </p>
@@ -96,4 +104,3 @@
   </script>
 </body>
 </html>
-
