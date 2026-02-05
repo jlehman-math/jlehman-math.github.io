@@ -94,6 +94,15 @@ body {
   max-width: 600px;
 }
 
+.content-column .papers .paper-description[data-open="closed" i] {
+  display: none;
+}
+
+.content-column .papers .paper-description[data-open="open" i] {
+  display: block;
+}
+
+
 .content-column .header {
   display: none;
   justify-content: space-between;
