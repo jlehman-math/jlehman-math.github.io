@@ -66,16 +66,21 @@ body {
 
 .content-column .papers .paper-title {
   font-weight: 400;
-  cursor: pointer;
-}
-
-.content-column .papers .paper-title:hover {
-  border-bottom: 1px solid;
 }
 
 .content-column .papers .paper-links {
   font-size: 0.9em;
   margin-left: 4px;
+}
+
+.content-column .papers .paper-links span {
+  color: var(--primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.content-column .papers .paper-links span:hover {
+  text-decoration: underline;
 }
 
 .content-column .papers .paper-links a {
