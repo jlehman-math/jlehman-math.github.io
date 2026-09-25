@@ -52,7 +52,7 @@
             Flexible surfaces in $\mathbb{C}P^2$ and $S^2\times S^2$.
           </span>
           <span class="paper-links">
-            [<a href="flexsurf.pdf" target="_blank">pdf</a>, <a href="http://arxiv.org/abs/2602.14753" target="_blank">arXiv</a>, <span id="abstract-button">abstract</span>]
+            [<a href="flexsurf.pdf" target="_blank">pdf</a>, <a href="http://arxiv.org/abs/2602.14753" target="_blank">arXiv</a>, <span class="abstract-button">abstract</span>]
           </span>
           <div class="paper-description" data-open="closed">
             A surface $\Sigma$ in a 4-manifold $M$ is called flexible if any mapping class of the surface arises as the restriction of a diffeomorphism $(M,\Sigma) \to (M,\Sigma)$. We construct flexible surfaces in $\mathbb{C}P^2$ and $S^2 \times S^2$ within any prescribed non-characteristic homology class. Within characteristic homology classes there is a spin structure obstructing flexibility and we construct so-called spin-flexible representatives.
@@ -64,7 +64,7 @@
             Flexible algebraic curves and fake vanishing cycles.
           </span>
           <span class="paper-links">
-            [<a href="flexcurves.pdf" target="_blank">pdf</a>, <a href="" target="_blank">arXiv</a>, <span id="abstract-button">abstract</span>]
+            [<a href="flexcurves.pdf" target="_blank">pdf</a>, <a href="" target="_blank">arXiv</a>, <span class="abstract-button">abstract</span>]
           </span>
           <div class="paper-description" data-open="closed">
             We prove that complex curves in sufficiently ample linear systems on simply connected projective surfaces are topologically (spin) flexible: any (spin) mapping class of the underlying real surface extends to a topological mapping class of the ambient 4-manifold. As a corollary, we construct fake vanishing cycles, that is, simple closed curves on the underyling real surface that are not vanishing cycles, yet still bound a topologically embedded $(\pm1)$-framed disk in the surface exterior. We also give examples of pushed in Seifert surfaces in $D^4$ that are not topologically spin-flexible, but become spin-flexible after a single internal stabilization. Our methods utilize the equivariant intersection form on the surface exterior. 
@@ -103,12 +103,16 @@
     </div>
 
   </div>
-  <script>
-    function switch_abstract() {
-      const description = document.querySelector(".paper-description");
-      description.dataset.open = description.dataset.open === "closed" ? "open" : "closed";
-    }
-    document.getElementById("abstract-button").addEventListener("click", () => switch_abstract());
-  </script>
+ <script>
+  function switch_abstract(button) {
+    const description = button.closest("li").querySelector(".paper-description");
+    description.dataset.open =
+      description.dataset.open === "closed" ? "open" : "closed";
+  }
+
+  document.querySelectorAll(".abstract-button").forEach(button => {
+    button.addEventListener("click", () => switch_abstract(button));
+  });
+</script>
 </body>
 </html>
